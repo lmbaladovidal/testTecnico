@@ -1,15 +1,24 @@
 
+
 import db from '../database/config/connection'
+import Product from '../database/models/Product';
 
 
-const getProducts= async (req,res)=>{
+const getProducts= (req,res)=>{
     
-    try {
-        await db.authenticate();
-        res.json("ObteniendoProductos");
-    } catch (error) {
-        console.error('Unable to connect to the database:', error);
+        Product.findAll()
+        .then(result=>{
+            res.json(result)
+        })
+        .catch(error=>{console.error('Unable to connect to the database:', error);})
     }
-};
+
+const createProduct = (req,res)=>{
+    Product.create()
+}
+
+const deleteProduct = (req,res)=>{
+    
+}
 
 export const methods = {getProducts}
