@@ -9,7 +9,7 @@ const cols = {
                     autoIncrement: true,
                     allowNull:false,
                 },
-                description:{
+                event:{
                     type:DataTypes.STRING
                 },
             }

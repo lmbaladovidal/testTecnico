@@ -1,7 +1,7 @@
 import {DataTypes} from 'sequelize'
 import db from '../config/connection'
 
-const alias = 'CustomerEvent';
+const alias = 'TransactionDetail';
 const cols = { 
                 id:{ 
                     type: DataTypes.INTEGER(6).UNSIGNED,
@@ -9,18 +9,19 @@ const cols = {
                     autoIncrement: true,
                     allowNull:false,
                 },
-                eventId:{
+                idProduct:{
                     type:DataTypes.INTEGER
                 },
-                timeStamp:{
-                    type:DataTypes.DATE
+                idTransaction:{
+                    type:DataTypes.INTEGER
                 },
+
             }
 const  config = {
     timestamps: false,
 
 };
 
-const CustomerEvent = db.define(alias,cols,config);
+const TransactionDetail = db.define(alias,cols,config);
 
-export default CustomerEvent
+export default TransactionDetail

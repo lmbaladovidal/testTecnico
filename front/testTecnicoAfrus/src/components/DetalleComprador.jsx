@@ -4,6 +4,7 @@ export const DetalleComprador = () => {
     console.log('detalleComprador');
   return (
     <>
+
         <div>DetalleComprador</div>
 
     </>

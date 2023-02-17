@@ -2,7 +2,7 @@ import { faker } from '@faker-js/faker';
 
 
 let customerArr = [];
-for (let i = 0; i < 3000; i++) {
+for (let i = 0; i < 10000; i++) {
 
     customerArr.push({    
         idType : faker.datatype.string(),    
@@ -11,5 +11,6 @@ for (let i = 0; i < 3000; i++) {
         creationDate : faker.date.past().toLocaleDateString()
     })   
 }
+
 
 export default customerArr;
