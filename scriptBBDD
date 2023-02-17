@@ -1,0 +1,44 @@
+CREATE TABLE testTecnicoProductos.Products (
+	id INT auto_increment NOT NULL,
+	name varchar(32) NOT NULL,
+	description varchar(128) NOT NULL,
+	price decimal NOT NULL,
+	quantity INT DEFAULT 0 NOT NULL,
+	CONSTRAINT NewTable_pk PRIMARY KEY (id)
+)
+
+
+CREATE TABLE testTecnicoProductos.Customer (
+	id INT auto_increment NOT NULL,
+	idType varchar(100) NULL,
+	name varchar(100) NULL,
+	lastname varchar(100) NULL,
+	dateCreation DATE NOT NULL,
+	CONSTRAINT Customer_pk PRIMARY KEY (id)
+)
+
+
+CREATE TABLE testTecnicoProductos.Transactions (
+	id int auto_increment NOT NULL,
+	idCustomer INT NOT NULL,
+	totalPrice DECIMAL NOT NULL,
+	task decimal NOT NULL,
+	`date` datetime NOT NULL,
+	CONSTRAINT Transactions_pk PRIMARY KEY (id)
+)
+
+CREATE TABLE testTecnicoProductos.customerevents (
+    id TINYINT auto_increment NOT NULL,
+    eventId TINYINT  NOT NULL,
+	tineStamp DATETIME NOT NULL,
+	CONSTRAINT Events_pk PRIMARY KEY (id)
+)
+
+CREATE TABLE testTecnicoProductos.Events (
+	id TINYINT auto_increment NOT NULL,
+	description varchar(32) NOT NULL,
+	CONSTRAINT Events_pk PRIMARY KEY (id)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_general_ci;
