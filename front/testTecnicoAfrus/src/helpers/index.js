@@ -1,2 +1,2 @@
 export * from './getDetalleComprador'
-export * from './getDatosComprador'
+export * from './GetDatosComprador'

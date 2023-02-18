@@ -1,11 +1,11 @@
 import React from 'react'
-import { datosComprador } from '../helpers'
+import {GetDatosComprador} from '../helpers/GetDatosComprador'
 
 export const DatosComprador = () => {
-    console.log(datosComprador)
   return (
     <>
         <h1>datosComprador</h1>
+        <GetDatosComprador />
     </>
   )
 }
